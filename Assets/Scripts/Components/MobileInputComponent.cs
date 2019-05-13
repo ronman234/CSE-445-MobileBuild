@@ -7,5 +7,5 @@ public class MobileInputComponent : MonoBehaviour
     public bool leftScreen;
     public bool rightScreen;
     public bool middleScreen;
-    public Vector3 screenWorldPosition;
+    public Touch middleScreenTouch;
 }
