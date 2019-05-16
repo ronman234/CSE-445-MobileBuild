@@ -5,31 +5,33 @@ using Unity.Entities;
 
 public class MobileInputSystem : ComponentSystem
 {
-   
-
     protected override void OnUpdate()
     {
-        MobileInputComponent m_Input = Camera.main.GetComponent<MobileInputComponent>();
-        for (int i = 0; i < Input.touchCount; i++)
+        Entities.ForEach((Rigidbody2D rigidbody2D, InputComponent inputcomponent, MoveSpeedComponent movespeedcomponent, MobileInputComponent m_Input) =>
         {
-            if(Input.touches[i].position.x > 0 && Input.touches[i].position.x <= 540)
+            for (int i = 0; i < Input.touchCount; i++)
             {
-                m_Input.leftScreen = true;
-            }
-            else if (Input.touches[i].position.x > 540 && Input.touches[i].position.x <= 1620)
-            {
-                m_Input.middleScreen = true;
-                m_Input.middleScreenTouch = Input.touches[i];
-            }
-            else if (Input.touches[i].position.x > 1620 && Input.touches[i].position.x <= 2160)
-            {
-                m_Input.rightScreen = true;
+                if(Input.touches[i].position.x > 0 && Input.touches[i].position.x <= 540)
+                {
+                    m_Input.leftScreen = true;
+                }
+                else if (Input.touches[i].position.x > 540 && Input.touches[i].position.x <= 1620)
+                {
+                    m_Input.middleScreen = true;
+                    m_Input.middleScreenTouch = Input.touches[i];
+                }
+                else if (Input.touches[i].position.x > 1620 && Input.touches[i].position.x <= 2160)
+                {
+                    m_Input.rightScreen = true;
+                }
+
+                if(Input.touches[i].phase == TouchPhase.Ended)
+                {
+                    m_Input.leftScreen = m_Input.rightScreen = m_Input.middleScreen = false;
+                }
             }
 
-            if(Input.touches[i].phase == TouchPhase.Ended)
-            {
-                m_Input.leftScreen = m_Input.rightScreen = m_Input.middleScreen = false;
-            }
-        }
+        });
+        
     }
 }

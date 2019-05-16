@@ -1,22 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.Entities;
-using System;
-
-/*public class PlayerMovementSystem : ComponentSystem
-{
-
-   using Unity.Entities;
+﻿using Unity.Entities;
 using UnityEngine;
 
 public class PlayerMovementSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        var m_Input = Camera.main.GetComponent<MobileInputComponent>();
         var delta = Time.deltaTime;
-        Entities.ForEach((TagPlayerComponent tagPlayer, Rigidbody2D rigidbody2D, InputComponent inputcomponent, MoveSpeedComponent movespeedcomponent) =>
+        Entities.ForEach((Rigidbody2D rigidbody2D, InputComponent inputcomponent, MoveSpeedComponent movespeedcomponent, MobileInputComponent m_Input) =>
         {
 
             if (m_Input.leftScreen || inputcomponent.LeftTouchKey) //allows player movement with right arrow or D
@@ -39,7 +29,7 @@ public class PlayerMovementSystem : ComponentSystem
             movespeedcomponent.isGrounded = Physics2D.OverlapCircle(movespeedcomponent.groundCheck.position, movespeedcomponent.groundCheckRadius, movespeedcomponent.Ground);
 
 
-            if (movespeedcomponent.isGrounded == true && (inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.x > 30)) //allows the player to jump
+            if (movespeedcomponent.isGrounded  && (inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y > 30)) //allows the player to jump
             {
                 //inputcomponent.MiddleTouchKey = true;
                 movespeedcomponent.extraJumpsValue = movespeedcomponent.extraJumps;  //stores values of extra jumps
@@ -48,7 +38,7 @@ public class PlayerMovementSystem : ComponentSystem
             
 
             //allows the player extra jumps while in air
-            if ((inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.x > 30) && movespeedcomponent.extraJumpsValue > 0 && movespeedcomponent.isGrounded == false)
+            if ((inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y > 30) && movespeedcomponent.extraJumpsValue > 0 && !movespeedcomponent.isGrounded )
             {
                 //inputcomponent.MiddleTouchKey = true;
                 rigidbody2D.velocity = Vector2.up * movespeedcomponent.jumpSpeed; //physics movement for extra jumps
@@ -63,5 +53,3 @@ public class PlayerMovementSystem : ComponentSystem
         });
     }
 }
-
-}*/
