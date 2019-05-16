@@ -1,13 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.Entities;
-using System;
-
-/*public class PlayerMovementSystem : ComponentSystem
-{
-
-   using Unity.Entities;
+﻿using Unity.Entities;
 using UnityEngine;
 
 public class PlayerMovementSystem : ComponentSystem
@@ -63,5 +54,3 @@ public class PlayerMovementSystem : ComponentSystem
         });
     }
 }
-
-}*/
