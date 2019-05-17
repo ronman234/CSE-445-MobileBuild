@@ -7,10 +7,11 @@ public class EnemyDetectionSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-
         Entities.ForEach((EnemyMovementComponent enemyMovement, Transform translation) =>
         {
-            if(Physics.Raycast(translation.position, enemyMovement.direction, 1))
+            RaycastHit2D hit = Physics2D.Raycast(translation.position + enemyMovement.direction, translation.position + enemyMovement.direction, .1f);
+
+            if (hit.collider.tag == "Wall")
             {
                 if (enemyMovement.isMovingRight)
                 {
@@ -24,6 +25,5 @@ public class EnemyDetectionSystem : ComponentSystem
                 }
             }
         });
-
     }
 }

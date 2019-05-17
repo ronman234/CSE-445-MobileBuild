@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 212424469300380896}
   - component: {fileID: 50644440699199806}
   - component: {fileID: 61038860015203986}
+  - component: {fileID: 7066531627336696766}
+  - component: {fileID: 6664235012489747052}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Bat
@@ -179,3 +181,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.54888344}
   m_EdgeRadius: 0
+--- !u!114 &7066531627336696766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566306449931984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6664235012489747052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566306449931984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48dfe61e44770cc4e93e3d1fc7d5e5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 1, y: 0, z: 0}
+  moveSpeed: 2
+  isMovingRight: 0

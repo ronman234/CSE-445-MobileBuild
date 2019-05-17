@@ -364,6 +364,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4914519851026561452, guid: 04d28427ad25e704d8f335c0e1c2bbfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914519851026561452, guid: 04d28427ad25e704d8f335c0e1c2bbfa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631544609102087606, guid: 04d28427ad25e704d8f335c0e1c2bbfa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631544609102087606, guid: 04d28427ad25e704d8f335c0e1c2bbfa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5540496812845183632, guid: 04d28427ad25e704d8f335c0e1c2bbfa,
         type: 3}
       propertyPath: m_Name
@@ -550,7 +570,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420321180}
-  - component: {fileID: 420321181}
   - component: {fileID: 420321179}
   m_Layer: 0
   m_Name: MapInitialization
@@ -571,10 +590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6962a6f0567d50b418d58f594bb792f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RandomMapPrefabs:
+  randomMapPrefabs:
   - {fileID: 4212279273556275965, guid: ff74f05b3726d274e8d50978d0b98c4b, type: 3}
-  MapHeight: 12.58
-  MapMultiplier: 10
+  mapHeight: 12.58
+  mapMultiplier: 10
 --- !u!4 &420321180
 Transform:
   m_ObjectHideFlags: 0
@@ -589,18 +608,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &420321181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420321178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1479961931
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,27 +838,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2086848988 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1566306449931984, guid: 64d9d9868852a3a479e82e6567dd5304,
-    type: 3}
-  m_PrefabInstance: {fileID: 1611875272}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2086848995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086848988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48dfe61e44770cc4e93e3d1fc7d5e5ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {x: 1, y: 0, z: 0}
-  moveSpeed: 2
-  isMovingRight: 0
 --- !u!1 &2100045266
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +929,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100045266}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243880963055838274, guid: 597d869247e770f4fbd6902913200eac,
     type: 2}
