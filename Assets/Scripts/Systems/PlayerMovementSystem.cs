@@ -29,7 +29,7 @@ public class PlayerMovementSystem : ComponentSystem
             movespeedcomponent.isGrounded = Physics2D.OverlapCircle(movespeedcomponent.groundCheck.position, movespeedcomponent.groundCheckRadius, movespeedcomponent.Ground);
 
 
-            if (movespeedcomponent.isGrounded  && (inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y > 30)) //allows the player to jump
+            if (movespeedcomponent.isGrounded  && (inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y > 5)) //allows the player to jump
             {
                 //inputcomponent.MiddleTouchKey = true;
                 movespeedcomponent.extraJumpsValue = movespeedcomponent.extraJumps;  //stores values of extra jumps
@@ -38,7 +38,7 @@ public class PlayerMovementSystem : ComponentSystem
             
 
             //allows the player extra jumps while in air
-            if ((inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y > 30) && movespeedcomponent.extraJumpsValue > 0 && !movespeedcomponent.isGrounded )
+            if ((inputcomponent.Jump || m_Input.middleScreenTouch.deltaPosition.y < -5) && movespeedcomponent.extraJumpsValue > 0 && !movespeedcomponent.isGrounded )
             {
                 //inputcomponent.MiddleTouchKey = true;
                 rigidbody2D.velocity = Vector2.up * movespeedcomponent.jumpSpeed; //physics movement for extra jumps
