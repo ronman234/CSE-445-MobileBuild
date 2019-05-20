@@ -10,18 +10,20 @@ public class EnemyDetectionSystem : ComponentSystem
         Entities.ForEach((EnemyMovementComponent enemyMovement, Transform translation) =>
         {
             RaycastHit2D hit = Physics2D.Raycast(translation.position + enemyMovement.direction, translation.position + enemyMovement.direction, .1f);
-
-            if (hit.collider.tag == "Wall")
+            if (hit)
             {
-                if (enemyMovement.isMovingRight)
+                if (hit.collider.tag == "Wall")
                 {
-                    enemyMovement.direction = Vector3.left;
-                    enemyMovement.isMovingRight = false;
-                }
-                else
-                {
-                    enemyMovement.direction = Vector3.right;
-                    enemyMovement.isMovingRight = true;
+                    if (enemyMovement.isMovingRight)
+                    {
+                        enemyMovement.direction = Vector3.left;
+                        enemyMovement.isMovingRight = false;
+                    }
+                    else
+                    {
+                        enemyMovement.direction = Vector3.right;
+                        enemyMovement.isMovingRight = true;
+                    }
                 }
             }
         });
