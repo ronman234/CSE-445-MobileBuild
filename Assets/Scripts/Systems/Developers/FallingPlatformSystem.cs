@@ -5,13 +5,24 @@ public class FallingPlatformSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        Entities.ForEach((InputComponent inputcomponent, MovementComponent movement) =>
-        {
-        });
+        var time = Time.deltaTime;
 
-        Entities.ForEach((FallingPlatformComponent fallingplatform, Rigidbody2D rigidbody2D) =>
+        Entities.ForEach((TagPlatform tag, Rigidbody2D rb, FallingPlatformComponent falling, BoxCollider2D collider) =>
         {
+            if (collider.IsTouchingLayers(LayerMask.GetMask("Default")))
+            {
+                falling.isOnPlatform = true;
 
+                if (falling.isOnPlatform == true)
+                {
+                    falling.fallTimer += time;
+
+                    if (falling.fallTimer > 0.5)
+                    {
+                        rb.isKinematic = false;
+                    }
+                }
+            }
         });
     }
 
