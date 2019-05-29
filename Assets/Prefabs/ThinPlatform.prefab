@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 212608564103332162}
   - component: {fileID: 68638914015543780}
   - component: {fileID: 251789627800800298}
+  - component: {fileID: 8020917407426318732}
+  - component: {fileID: 7195557493225715656}
   m_Layer: 8
   m_Name: ThinPlatform
   m_TagString: Platform
@@ -118,3 +120,29 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 0
+--- !u!114 &8020917407426318732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481505802243602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537df5e95e55f4c109d9e7a8b01f1af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallTimer: 0
+  isOnPlatform: 0
+--- !u!114 &7195557493225715656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481505802243602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf10cdea1344482e91a4f2b58506b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
