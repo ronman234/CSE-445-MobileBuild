@@ -10,6 +10,6 @@ public class InputComponent : MonoBehaviour
     //Touch key features
     public bool RightTouchKey;
     public bool LeftTouchKey;
-    //public bool MiddleTouchKey;
+    public bool MiddleTouchKey;
 
 }

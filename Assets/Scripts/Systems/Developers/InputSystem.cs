@@ -7,8 +7,6 @@ public class InputSystem : ComponentSystem
     {
         Entities.ForEach((InputComponent inputComponent) =>
         {
-            //inputComponent.Movement = Input.GetAxis("Horizontal");
-
             inputComponent.Jump = Input.GetKeyDown(KeyCode.Space);
             inputComponent.Down = Input.GetKey(KeyCode.DownArrow);
             inputComponent.LeftTouchKey = Input.GetKey(KeyCode.A);
