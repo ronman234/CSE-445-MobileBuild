@@ -1,15 +1,14 @@
 ﻿using Unity.Entities;
 using UnityEngine;
 
-public class MovingPlatformSystem : ComponentSystem
+public class OneMovingPlatformSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
         var time = Time.time;
 
-        Entities.ForEach((MovingPlatformComponent moving, BoxCollider2D collider) =>
-        {
-            moving.startPos = moving.transform.localPosition;
+        Entities.ForEach((OneWayMovingPlatformComponent moving, BoxCollider2D collider, Transform position) =>
+        { 
 
             if (collider.IsTouchingLayers(LayerMask.GetMask("Default"))) //parents the player to the platform
             {
@@ -22,12 +21,12 @@ public class MovingPlatformSystem : ComponentSystem
 
             if (moving.isVertical == false)   //moves platform horizontally
             {
-                moving.transform.position = new Vector2(PingPong(time * moving.speed, -moving.leftLengthDistance, moving.rightLengthDistance), moving.transform.position.y);
-            }
+                position.position = new Vector2(PingPong(time * moving.speed, -moving.leftLengthDistance + position.position.x, moving.rightLengthDistance + position.position.x), position.position.y);
 
-            if (moving.isVertical == true)   //moves platform vertically
+            }
+            else if (moving.isVertical == true)   //moves platform vertically
             {
-                moving.transform.position = new Vector2(moving.transform.position.x, PingPong(time * moving.speed, -moving.leftLengthDistance, moving.rightLengthDistance));
+                position.position = new Vector2(position.position.x, PingPong(time * moving.speed, -moving.leftLengthDistance + position.position.y, moving.rightLengthDistance + position.position.y));
             }
 
             float PingPong(float t, float minLength, float maxLength)  //math for moving the platform from A to B and B to A in a loop

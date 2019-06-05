@@ -30,36 +30,15 @@ public class AudioManagerSystem : ComponentSystem
                 s.source.outputAudioMixerGroup = s.mixer;
             }
 
-            Play("Theme");
-            Play("LavaRising");
-            Play("MainMenu");
-            Play("FireBurning");
+            audio.Play("Theme");
+            audio.Play("LavaRising");
+            audio.Play("MainMenu");
+            audio.Play("FireBurning");
 
-            Mute("LavaRising");
-            Mute("Theme");
-            Mute("FireBurning");
+            audio.Mute("LavaRising");
+            audio.Mute("Theme");
+            audio.Mute("FireBurning");
 
-            void Play(string name)
-            {
-                SoundComponent s = System.Array.Find(audio.sounds, sound => sound.name == name);
-                if (s == null)
-                {
-                    Debug.LogWarning("Sound: " + name + " not found.");
-                    return;
-                }
-                s.source.Play();
-            }
-
-            void Mute(string name)
-            {
-                SoundComponent s = System.Array.Find(audio.sounds, sound => sound.name == name);
-                if (s == null)
-                {
-                    Debug.LogWarning("Sound " + name + " not found.");
-                    return;
-                }
-                s.source.volume = 0.0f;
-            }
 
         });
     }

@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 212468070884077014}
   - component: {fileID: 60913106456791626}
   m_Layer: 0
-  m_Name: bouncy platform
+  m_Name: Bouncy Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1655388235732148}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 21cdb08fef8d66d4099dc3cc25a12edf, type: 2}
+  m_Material: {fileID: 6200000, guid: 30dee3e0029df2b4b9d2d1b5bf240a59, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

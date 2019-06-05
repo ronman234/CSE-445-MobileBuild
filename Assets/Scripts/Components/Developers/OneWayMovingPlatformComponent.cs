@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MovingPlatformComponent : MonoBehaviour
+public class OneWayMovingPlatformComponent : MonoBehaviour
 {
     public Transform floatingplatform;
 
@@ -11,7 +11,7 @@ public class MovingPlatformComponent : MonoBehaviour
     public float speed;
 
     [HideInInspector]
-    public Vector3 startPos;
+    public Vector2 startPos;
 
     public bool isVertical;   //checks to see if platform is moving vertically or horizontally
 }
