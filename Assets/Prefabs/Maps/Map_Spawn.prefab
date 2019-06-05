@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 5540496813054241172}
   m_Layer: 0
   m_Name: ThickPlatform
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1510,7 +1510,7 @@ GameObject:
   - component: {fileID: 5540496813955491100}
   m_Layer: 0
   m_Name: ThickPlatform (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
