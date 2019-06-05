@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 131415603286938441}
   - component: {fileID: 131415603286938440}
   - component: {fileID: 131415603286938447}
-  - component: {fileID: 131415603286938449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -322,16 +321,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 20
   canJump: 0
---- !u!114 &131415603286938449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131415603286938445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67774f06d08a84253ad0d2b041731c56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 0}
