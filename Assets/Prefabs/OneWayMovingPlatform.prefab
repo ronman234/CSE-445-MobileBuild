@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingplatform: {fileID: 3843925155963366327}
-  player: {fileID: 131415603286938445, guid: 5fb24b2f4ce3a5b43b2a82350cd57056, type: 3}
-  negativeLengthDistance: 0.125
-  positiveLengthDistance: 0.125
+  player: {fileID: 0}
+  negativeLengthDistance: 0.09
+  positiveLengthDistance: 0.09
   speed: 0.1
   startPos: {x: 0, y: 0}
   isVertical: 1

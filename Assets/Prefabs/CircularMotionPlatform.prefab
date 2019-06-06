@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Platform: {fileID: 5479568642198238511}
-  Player: {fileID: 131415603286938455, guid: 5fb24b2f4ce3a5b43b2a82350cd57056, type: 3}
+  Player: {fileID: 0}
   RotationRadius: 0.09
   AngularSpeed: 1.8
   PosX: 0

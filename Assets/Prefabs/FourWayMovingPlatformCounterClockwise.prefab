@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform: {fileID: 5370672139484715093}
-  player: {fileID: 131415603286938445, guid: 5fb24b2f4ce3a5b43b2a82350cd57056, type: 3}
+  player: {fileID: 0}
   moveSpeed: 2.3
   currentPoint: {fileID: 0}
   points:
