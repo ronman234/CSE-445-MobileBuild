@@ -6,8 +6,8 @@ public class OneWayMovingPlatformComponent : MonoBehaviour
 
     public GameObject player; //allows player to be parent to platform
 
-    public float leftLengthDistance;
-    public float rightLengthDistance;
+    public float negativeLengthDistance;
+    public float positiveLengthDistance;
     public float speed;
 
     [HideInInspector]

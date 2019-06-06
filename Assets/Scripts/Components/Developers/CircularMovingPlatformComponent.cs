@@ -7,7 +7,7 @@ public class CircularMovingPlatformComponent : MonoBehaviour
     public Transform Player;
 
     public float RotationRadius;
-    public float AngularSpeed;
+    public float AngularSpeed;   //set positive value for counter clockwise rotation and negative to go clockwise
 
 
     public float PosX;

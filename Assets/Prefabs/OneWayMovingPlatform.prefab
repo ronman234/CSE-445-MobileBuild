@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3843925155963366328}
   - component: {fileID: 3843925155963366331}
   - component: {fileID: 8542493218898673513}
-  - component: {fileID: 5805359935696242842}
+  - component: {fileID: 7831542071437310084}
   m_Layer: 8
   m_Name: OneWayMovingPlatform
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3843925155963366333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.69062, y: 1.495, z: 0}
+  m_LocalScale: {x: 1.8, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -126,7 +126,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 135
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -156,11 +156,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatingplatform: {fileID: 3843925155963366327}
   player: {fileID: 131415603286938445, guid: 5fb24b2f4ce3a5b43b2a82350cd57056, type: 3}
-  leftLengthDistance: 1
-  rightLengthDistance: 1
-  speed: 1
+  negativeLengthDistance: 0.14
+  positiveLengthDistance: 0.14
+  speed: 0.16
   startPos: {x: 0, y: 0}
-  isVertical: 0
+  isVertical: 1
 --- !u!114 &8542493218898673513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,22 +173,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c1b9150915aa34ebaa29fa36690689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5805359935696242842
-MonoBehaviour:
+--- !u!95 &7831542071437310084
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3843925155963366333}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edd8237544e848088baa33335ed56ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatingplatform: {fileID: 3843925155963366327}
-  player: {fileID: 131415603286938445, guid: 5fb24b2f4ce3a5b43b2a82350cd57056, type: 3}
-  leftLengthDistance: 1
-  rightLengthDistance: 1
-  speed: 1
-  startPos: {x: 0, y: 0}
-  isVertical: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 084d35ce37da8774d96c71ec8e220768, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
