@@ -27,7 +27,7 @@ public class EnemyDamageSystem : ComponentSystem
                     Physics2D.IgnoreLayerCollision(0, 10, true);
                     Physics2D.IgnoreLayerCollision(8, 10, true);
                     inv.startTimer = true;
-                    //Object.FindObjectOfType<AudioManager>().Play("PlayerHit");
+                    Object.FindObjectOfType<AudioManager>().Play("PlayerHit");
                 }
                 if (Health.currentHealth == 0)
                 {
