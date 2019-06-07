@@ -11,6 +11,7 @@ public class JumpSystem : ComponentSystem
             if ( input.Jump && jump.canJump || mobileInput.middleScreen && jump.canJump )
             {
                 rb.velocity = new Vector2(rb.velocity.x, Vector2.up.y * jump.height);
+                Object.FindObjectOfType<AudioManager>().Play("Jump");
                 jump.canJump = false;
 
             }

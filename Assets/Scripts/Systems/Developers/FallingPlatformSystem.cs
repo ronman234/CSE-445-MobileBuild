@@ -20,6 +20,7 @@ public class FallingPlatformSystem : ComponentSystem
                     if (falling.fallTimer > 0.5)
                     {
                         rb.isKinematic = false;
+                        Object.FindObjectOfType<AudioManager>().Play("FallingPlatform");
                     }
                 }
             }
