@@ -503,7 +503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1984243956571195045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThickPlatformSize2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787137132883339522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThickPlatform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 7132832148554620080}
   - component: {fileID: 1497646724534833669}
   - component: {fileID: 6006734677731820442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall Border (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7337575939502905682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThickPlatformSize2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419803907897362256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThickPlatformSize2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4440284882713024912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThickPlatform3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,6 +2003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785011367492085862, guid: ed812702db6f2a54b96dcc1d3b0cdb1b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3667184136773211595, guid: ed812702db6f2a54b96dcc1d3b0cdb1b,
         type: 3}

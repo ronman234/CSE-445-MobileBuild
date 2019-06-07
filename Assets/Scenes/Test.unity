@@ -349,7 +349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomMapPrefabs:
-  - {fileID: 4212279273556275965, guid: ff74f05b3726d274e8d50978d0b98c4b, type: 3}
+  - {fileID: 4692193295226647012, guid: 16350d36b664d49999cc66b3845a0ec6, type: 3}
+  - {fileID: 4692193295226647012, guid: 16350d36b664d49999cc66b3845a0ec6, type: 3}
+  - {fileID: 8512132472920361371, guid: e941f8576354f45d8b88562289fc610a, type: 3}
+  - {fileID: 8806255466768733142, guid: bb73feba7c2554d86a9d508c2ed7079a, type: 3}
+  - {fileID: 1052596346587285967, guid: c992f609b78da464f90a7897c37af757, type: 3}
   mapHeight: 12.58
   mapMultiplier: 10
 --- !u!4 &411678072

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4111719161125894}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AirDetect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 61038860015203986}
   - component: {fileID: 7066531627336696766}
   - component: {fileID: 6664235012489747052}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bat
   m_TagString: Bat
   m_Icon: {fileID: 0}
