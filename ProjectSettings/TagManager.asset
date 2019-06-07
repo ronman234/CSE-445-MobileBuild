@@ -20,8 +20,13 @@ TagManager:
   - 
   - Ground
   - Wall
+<<<<<<< HEAD
   - 
   - Enemy
+=======
+  - Enemy
+  - 
+>>>>>>> 0fb27f0cea54437d64df969b2d5b98cc050e75d5
   - 
   - 
   - 

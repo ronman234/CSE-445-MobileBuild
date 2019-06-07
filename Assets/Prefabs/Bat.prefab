@@ -45,7 +45,13 @@ GameObject:
   - component: {fileID: 61038860015203986}
   - component: {fileID: 7066531627336696766}
   - component: {fileID: 6664235012489747052}
+<<<<<<< HEAD
   m_Layer: 11
+=======
+  - component: {fileID: 691528390}
+  - component: {fileID: 691528391}
+  m_Layer: 10
+>>>>>>> 0fb27f0cea54437d64df969b2d5b98cc050e75d5
   m_Name: Bat
   m_TagString: Bat
   m_Icon: {fileID: 0}
@@ -123,7 +129,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 1ae4d2c2b67ef9a48a93f6b849eeed31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ae4d2c2b67ef9a48a93f6b849eeed31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,7 +171,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 30dee3e0029df2b4b9d2d1b5bf240a59, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.04693508}
@@ -208,3 +214,29 @@ MonoBehaviour:
   direction: {x: 1, y: 0, z: 0}
   moveSpeed: 2
   isMovingRight: 0
+--- !u!114 &691528390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566306449931984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e63b21bf541f1440b75c808869ac199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &691528391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566306449931984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5acb80609fc2ec46a0f771e8c284c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  currentHealth: 1
