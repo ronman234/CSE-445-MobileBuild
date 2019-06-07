@@ -22,10 +22,8 @@ public class GameManager : MonoBehaviour
 
     void MainMenu()
     {
-        FindObjectOfType<AudioManagerComponent>().Mute("Theme");
-        FindObjectOfType<AudioManagerComponent>().Mute("LavaRising");
-        FindObjectOfType<AudioManagerComponent>().Mute("FireBurning");
-        FindObjectOfType<AudioManagerComponent>().UnMute("MainMenu");
+        FindObjectOfType<AudioManager>().Mute("Theme");
+        FindObjectOfType<AudioManager>().UnMute("MainMenu");
         SceneManager.LoadScene("Main Menu");
     }
 

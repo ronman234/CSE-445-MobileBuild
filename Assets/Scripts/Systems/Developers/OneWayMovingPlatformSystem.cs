@@ -19,14 +19,14 @@ public class OneMovingPlatformSystem : ComponentSystem
                 moving.player.transform.parent = null;   //removes player from the platform 
             }
 
-            if (moving.isVertical == false)   //moves platform horizontally
+            if (moving.isVertical == false )  //moves platform horizontally
             {
-                position.position = new Vector2(PingPong(time * moving.speed, -moving.leftLengthDistance + position.position.x, moving.rightLengthDistance + position.position.x), position.position.y);
-
+                position.position = new Vector2(PingPong(time * moving.speed, -moving.negativeLengthDistance + position.position.x, moving.positiveLengthDistance + position.position.x), position.position.y);
             }
+
             else if (moving.isVertical == true)   //moves platform vertically
             {
-                position.position = new Vector2(position.position.x, PingPong(time * moving.speed, -moving.leftLengthDistance + position.position.y, moving.rightLengthDistance + position.position.y));
+                position.position = new Vector2(position.position.x, PingPong(time * moving.speed, -moving.negativeLengthDistance + position.position.y, moving.positiveLengthDistance + position.position.y));
             }
 
             float PingPong(float t, float minLength, float maxLength)  //math for moving the platform from A to B and B to A in a loop

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6721774290759684685}
-  - component: {fileID: 6721774290759684684}
+  - component: {fileID: 3461489164403549167}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6721774290759684684
+--- !u!114 &3461489164403549167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,80 +40,74 @@ MonoBehaviour:
   m_GameObject: {fileID: 6721774290759684691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86f81fb11617446878d855d64a976c12, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e3e40e3a6f7c451bb1123f10bb244c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   group1: {fileID: 243880963055838274, guid: 597d869247e770f4fbd6902913200eac, type: 2}
   group2: {fileID: 243459986211500986, guid: 597d869247e770f4fbd6902913200eac, type: 2}
   group3: {fileID: 243996581340711970, guid: 597d869247e770f4fbd6902913200eac, type: 2}
+  group4: {fileID: 8841683484062397629, guid: 597d869247e770f4fbd6902913200eac, type: 2}
   sounds:
   - name: PlayerHit
     clip: {fileID: 8300000, guid: 8a7602e81ff459a4ea4a656ee4070eaa, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.45
+    pitch: 1.04
     mixer: {fileID: 243459986211500986, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 9d24554fa7d791849829a48ec76b3933, type: 3}
-    volume: 1
-    pitch: 1
-    mixer: {fileID: 243880963055838274, guid: 597d869247e770f4fbd6902913200eac, type: 2}
-    loop: 1
-    source: {fileID: 0}
-  - name: LavaRising
-    clip: {fileID: 8300000, guid: 427fd2eae15548b4088a4748e1a8e739, type: 3}
-    volume: 1
+    volume: 0.15
     pitch: 1
     mixer: {fileID: 243880963055838274, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 1
     source: {fileID: 0}
   - name: HitArmor
     clip: {fileID: 8300000, guid: 192054080ab165d42877d6246777cf36, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.2
+    pitch: 1.16
     mixer: {fileID: 243996581340711970, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
   - name: RockCrumble
     clip: {fileID: 8300000, guid: 36bf747d89ecf964b98558f150e22580, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.62
+    pitch: 1.04
     mixer: {fileID: 243996581340711970, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
   - name: SquishedBat
     clip: {fileID: 8300000, guid: c2645b959676b144fb4abf23b6d53b82, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.6
+    pitch: 1.02
     mixer: {fileID: 243996581340711970, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
   - name: Whoosh
     clip: {fileID: 8300000, guid: 7ce93ce396318bd4885959af7baa2f61, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 1.2
     mixer: {fileID: 243459986211500986, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
-  - name: FireBurning
-    clip: {fileID: 8300000, guid: 1aa8e5cd272520541a1e96fee1b35b10, type: 3}
-    volume: 0.05
-    pitch: 0.43
-    mixer: {fileID: 243996581340711970, guid: 597d869247e770f4fbd6902913200eac, type: 2}
-    loop: 1
-    source: {fileID: 0}
-  - name: Bonk
-    clip: {fileID: 8300000, guid: c540bfb290e6f8a4581ba558f7ca7976, type: 3}
-    volume: 0.1
-    pitch: 2
+  - name: Jump
+    clip: {fileID: 8300000, guid: 8db25e16dce7343a0964d6f2e8905854, type: 3}
+    volume: 0.26
+    pitch: 1.08
     mixer: {fileID: 243459986211500986, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 0
     source: {fileID: 0}
   - name: MainMenu
     clip: {fileID: 8300000, guid: 44e01b26add3ddb408fdbcd63156b1e6, type: 3}
-    volume: 0
-    pitch: 0
-    mixer: {fileID: 243459986211500986, guid: 597d869247e770f4fbd6902913200eac, type: 2}
+    volume: 0.55
+    pitch: 1
+    mixer: {fileID: 243880963055838274, guid: 597d869247e770f4fbd6902913200eac, type: 2}
     loop: 1
+    source: {fileID: 0}
+  - name: FallingPlatform
+    clip: {fileID: 8300000, guid: 0ce7fe83a6fde1d449e430267be07f22, type: 3}
+    volume: 0.4
+    pitch: 1.18
+    mixer: {fileID: 8841683484062397629, guid: 597d869247e770f4fbd6902913200eac, type: 2}
+    loop: 0
     source: {fileID: 0}
