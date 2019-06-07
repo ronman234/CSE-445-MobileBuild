@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 using UnityEngine;
 
-public class PlayerDamageSystem : ComponentSystem
+public class PlayeToEnemyrDamageSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
@@ -23,18 +23,26 @@ public class PlayerDamageSystem : ComponentSystem
                     Debug.Log("collider worked");
                     Health.currentHealth -= 1;
 
-                    if (Health.currentHealth == 0)
+                    if (Health.currentHealth == 0 && collider.tag == "Bat")
                     {
                         Debug.Log("destroy enemy");
                         Object.FindObjectOfType<AudioManager>().Play("SquishedBat");
                         MonoBehaviour.Destroy(tag.gameObject);
                     }
-                    /*
-                    if (Hit.collider.IsTouching(collider))
-                    {
 
-                    }*/
+                if (Health.currentHealth == 0 && collider.tag == "Gargoyle")
+                {
+                    Debug.Log("destroy enemy");
+                    Object.FindObjectOfType<AudioManager>().Play("RockCrumble");
+                    MonoBehaviour.Destroy(tag.gameObject);
                 }
+
+                /*
+                if (Hit.collider.IsTouching(collider))
+                {
+
+                }*/
+            }
         
         });
     }

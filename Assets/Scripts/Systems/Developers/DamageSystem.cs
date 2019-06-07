@@ -9,8 +9,7 @@ public class DamageSystem : ComponentSystem
         Entities.ForEach((DamageComponent damageComponent, LifeComponent lifeComponent, EnemyComponent enemyComponent) =>
         {
             // Check if gameobject has an Enemy script
-            if (enemyComponent.isBat)
-            {
+
                 //Check if grounded
                 if (damageComponent.isGrounded)
                 {
@@ -24,28 +23,28 @@ public class DamageSystem : ComponentSystem
                 { //various ways to jump and damage bat
                     if (damageComponent.hitLeftFoot)
                     {
-                        if (damageComponent.hitLeftFoot == enemyComponent.isBat)
+                        if (damageComponent.hitLeftFoot == enemyComponent)
                         {
                             damageComponent.jumpedOnBat = true;
                         }
                     }
                     else if (damageComponent.hitLeftHeel)
                     {
-                        if (damageComponent.hitLeftHeel == enemyComponent.isBat)
+                        if (damageComponent.hitLeftHeel == enemyComponent)
                         {
                             damageComponent.jumpedOnBat = true;
                         }
                     }
                     else if (damageComponent.hitRightFoot)
                     {
-                        if (damageComponent.hitRightFoot == enemyComponent.isBat)
+                        if (damageComponent.hitRightFoot == enemyComponent)
                         {
                             damageComponent.jumpedOnBat = true;
                         }
                     }
                     else if (damageComponent.hitRightHeel)
                     {
-                        if (damageComponent.hitRightHeel == enemyComponent.isBat)
+                        if (damageComponent.hitRightHeel == enemyComponent)
                         {
                             damageComponent.jumpedOnBat = true;
                         }
@@ -56,57 +55,9 @@ public class DamageSystem : ComponentSystem
                         lifeComponent.removeHitPoints(1);
                     }
                 }
-            } //various ways to jump and damage player 1 or player 2
-            else if (lifeComponent.player1 || lifeComponent.player2)
-            {
-                //Check if grounded
-                if (damageComponent.isGrounded)
-                {
-                    Debug.Log("Player is grounded");
-                }
-                else if (!damageComponent.hitLeftFoot && !damageComponent.hitLeftHeel && !damageComponent.hitRightFoot && !damageComponent.hitRightHeel)
-                {
-                    Debug.Log("Feet Raycast NOT detecting a collider.");
-                }
-                else
-                {
-                    if (damageComponent.hitLeftFoot)
-                    {
-                        if (damageComponent.hitLeftFoot == lifeComponent.player1 || lifeComponent.player2)
-                        {
-                            damageComponent.landedOnPlayer = true;
-                        }
-                    }
-                    else if (damageComponent.hitLeftHeel)
-                    {
-                        if (damageComponent.hitLeftHeel == lifeComponent.player1 || lifeComponent.player2)
-                        {
-                            damageComponent.landedOnPlayer = true;
-                        }
-                    }
-                    else if (damageComponent.hitRightFoot)
-                    {
-                        if (damageComponent.hitRightFoot == lifeComponent.player1 || lifeComponent.player2)
-                        {
-                            damageComponent.landedOnPlayer = true;
-                        }
-                    }
-                    else if (damageComponent.hitRightHeel)
-                    {
-                        if (damageComponent.hitRightHeel == lifeComponent.player1 || lifeComponent.player2)
-                        {
-                            damageComponent.landedOnPlayer = true;
-                        }
-                    }
-                    if (damageComponent.landedOnPlayer)
-                    {
-                        damageComponent.isGrounded = true;
-                        lifeComponent.removeHitPoints(1);
-
-                        damageComponent.landedOnPlayer = false;
-                    }
-                }
-            }
+             //various ways to jump and damage player 1 or player 2
+            
+            
         });
     }
 }

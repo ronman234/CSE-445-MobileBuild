@@ -7,7 +7,7 @@ public class EnemyDetectionSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
-        Entities.ForEach((EnemyMovementComponent enemyMovement, Transform translation) =>
+        Entities.ForEach((EnemyMovementComponent enemyMovement, Transform translation, BatTag tag) =>
         {
             RaycastHit2D hit = Physics2D.Raycast(translation.position + enemyMovement.direction, translation.position + enemyMovement.direction, .1f);
             if (hit)
