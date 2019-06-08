@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    public int health;
+    public int health = 3;
     public int currentHealth;
 }
