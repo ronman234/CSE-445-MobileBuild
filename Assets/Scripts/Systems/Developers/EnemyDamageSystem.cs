@@ -28,7 +28,8 @@ public class EnemyDamageSystem : ComponentSystem
                     Physics2D.IgnoreLayerCollision(0, 10, true);    //sets true to ignore player and enemy collision layers
                     Physics2D.IgnoreLayerCollision(8, 10, true);    //set true to ignore ground and enemy collision layers 
                     inv.startTimer = true;                          //start timer is true
-                    Object.FindObjectOfType<AudioManager>().Play("PlayerHit"); 
+                    Object.FindObjectOfType<AudioManager>().Play("PlayerHit");
+                    inv.invincible.enabled = false;
                 }
                 if (Health.currentHealth == 0)              //if current health equals 0 
                 {
